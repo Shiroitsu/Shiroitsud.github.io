@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PruébaT</title>
+  <link rel="icon" type="image/png" href="imagenes/cerebro.png" sizes="640x640">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* --- ESTILOS CORREGIDOS PARA EL ENCABEZADO --- */
+    .top-bar {
+      background-color: #323232;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      height: 60px; /* Altura fija para la barra superior */
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input {
+      background-color: #444;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      padding: 8px 12px;
+      color: white;
+    }
+
+    .search-container button {
+      background-color: #444;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 0 5px 5px 0;
+      color: white;
+      cursor: pointer;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Espacio entre logos */
+      height: 45px; /* Altura de los logos */
+    }
+
+    .logos img {
+      height: 100%;
+      width: auto;
+    }
+
+    .menu-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .educacion-digital {
+      background-color: #f65a31;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      white-space: nowrap; /* Evita que el texto se parta */
+    }
+
+    .lightbulb-icon img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    /* --- FIN DE LOS ESTILOS DEL ENCABEZADO --- */
+
+
+    .header-banner {
+      background-color: #ff6b3e;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .header-banner img {
+      height: 35px;
+    }
+
+    .link-section {
+      background-color: #222;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .link-section a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .info-section {
+      text-align: center;
+      line-height: 1;
+      margin: 20px;
+      padding: 0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .info-section-2 {
+      text-align: left;
+      line-height: 1.2;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .image-section-2 img {
+      margin: 10px auto;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-section-3 img {
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .image-section-4 img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 100px auto 0;
+    }
+
+    .info-section-3 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .link-section-4 img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .image-section-5 img {
+      width: 130px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* Media Queries para diseño responsivo (Móviles) */
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        height: auto; /* Altura automática para que quepa todo */
+        padding: 15px;
+      }
+
+      .search-container, .menu-container {
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: center;
+      }
+
+      .logos {
+        order: -1;
+        margin-bottom: 15px;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .lightbulb-icon {
+        display: none; /* Opcional: Ocultar ícono en móviles para ahorrar espacio */
+      }
+
+      .header-banner {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .info-section-2 {
+        padding: 20px;
+      }
+
+      .image-section-3 img,
+      .link-section-4 img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="search-container">
+      <input type="text" placeholder="Buscar">
+      <button>🔍</button>
+    </div>
+    <div class="logos">
+      <img src="imagenes/a.jpg" alt="Logo A">
+      <img src="imagenes/pruebat.jpg" alt="Logo Cerebro">
+      <img src="imagenes/fundacion.jpg" alt="Fundación Carlos Slim">
+    </div>
+    <div class="menu-container img">
+      <div class="educacion-digital">Educación digital &#9662;</div>
+    </div>
+    <div class="lightbulb-icon">
+      <img src="imagenes/bombillo-removebg-preview.png" alt="Idea" style="height: 55px;">
+    </div>
+  </div>
+
+  <div class="header-banner">
+    Ejercitador para el mejoramiento de los aprendizajes
+  </div>
+
+  <div class="info-section">
+    <p>Antes de iniciar, mira este video para saber cómo activar y realizar las actividades del ejercitador.</p>
+    <p>Para que tus constancias salgan con tu nombre, no olvides completar los datos de tu perfil.</p>
+  </div>
+
+  <div class="image-section">
+    <img src="imagenes/video.jpg" alt="not found">
+  </div>
+
+  <div class="info-section-2">
+    <p>1. Después de haber visto el video, ingresa a la sección “Ejercicios de diagnóstico” y pon a prueba tus conocimientos al realizar los ejercicios de diagnóstico inicial de Comunicación y Lenguaje y Matemáticas. Descarga tus hojas de resultados disponibles en PDF y compártelas con tu docente encargado.</p>
+    <p>2. Luego, practica con las lecciones que te presentamos para mejorar tus conocimientos de Comunicación y Lenguaje y Matemáticas. Para que puedas realizar los ejercicios del diagnóstico final, debes almenos haber alcanzado el 70 % de avance en tus lecciones de Comunicación y Lenguaje y el 70 % en Matemáticas.</p>
+    <p>3. Revisa las barras de tu “Avance general de la estrategia” para saber cuánto te falta para llegar a la meta; puedes descargarla en PDF al dar clic en “Imprimir” y compártela con tu docente encargado.</p>
+    <p>4. Cuando hayas alcanzado el 70 % en las lecciones, podrás realizar los ejercicios del diagnóstico final y comprobar cuánto mejoraron tus aprendizajes en Comunicación y Lenguaje y en Matemáticas. Descarga y guarda tus hojas con los resultados, disponibles en PDF y compártelas con tu docente encargado.</p>
+    <p>5. Recibirás una constancia oficial del Ministerio de Educación si completas al menos el 70% de progreso en tus lecciones en cada área y realizas los ejercicios de diagnóstico inicial y final.</p>
+    <p>6. En tu constancia del Ministerio de Educación recibirás mención honorífica si realizas los ejercicios de diagnóstico inicial y final y tus barras de avance reflejan el 100% de progreso en toda la estrategia.</p>
+    <p style="line-height: 1.5;">Cuando trabajes las lecciones, toma en cuenta lo siguiente:</p>
+  </div>
+
+  <div class="image-section-2">
+    <img src="imagenes/info.jpg" alt="not found">
+  </div>
+
+  <div class="image-section-3">
+    <img src="imagenes/tres.jpg" alt="not found">
+  </div>
+
+  <p class="info-section-3">
+    Christian Daniel Castro García
+  </p>
+
+  <div class="image-section-4">
+    <img src="imagenes/avance general de la estrategia.jpg" alt="not found">
+  </div>
+
+  <div class="link-section-4">
+    <img src="imagenes/sertififcado.jpg" alt="not found">
+  </div>
+
+  <div class="image-section-5">
+    <img src="imagenes/imprimir.jpg" alt="not found">
+  </div>
+
+</body>
+
+</html>
